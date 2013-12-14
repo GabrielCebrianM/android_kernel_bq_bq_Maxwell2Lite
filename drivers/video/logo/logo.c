@@ -80,6 +80,10 @@ const struct linux_logo * __init_refok fb_find_logo(int depth)
 		/* Generic Linux logo */
 		logo = &logo_linux_clut224;
 #endif
+#ifdef CONFIG_LOGO_CUSTOM_CLUT224
+		/* Custom GaBOr Kernel logo */
+		logo = &logo_custom_clut224;
+#endif
 #ifdef CONFIG_LOGO_G3_CLUT224
 		/* Generic Linux logo */
 		logo = &logo_g3_clut224;
